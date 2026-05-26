@@ -1,3 +1,3 @@
 FROM openresty/openresty:alpine
 
-RUN opm get SkyLothar/lua-resty-jwt
+RUN opm get cdbattags/lua-resty-jwt
