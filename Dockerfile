@@ -1,3 +1,3 @@
-FROM openresty/openresty:alpine-opm
+FROM openresty/openresty:alpine
 
-RUN opm get cdbattags/lua-resty-jwt
+RUN apk add --no-cache perl && opm get cdbattags/lua-resty-jwt
