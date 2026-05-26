@@ -25,7 +25,9 @@ if not token then
     return deny("bearer token required")
 end
 
-local obj = jwt:verify(secret, token)
+local obj = jwt:verify(secret, token, {
+    lifetime_grace_period = 0,
+})
 
 if not obj.verified then
     return deny(obj.reason or "invalid token")
